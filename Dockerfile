@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
-    software-properties-common
+    software-properties-common \
+    jq
 
 COPY --from=build-env /go/bin/send-slack-notification /usr/local/bin
 
